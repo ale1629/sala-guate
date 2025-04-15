@@ -1,53 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muebles de Sala - Guatemala</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Furniture City - Muebles de Sala</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
+
+  <!-- Encabezado -->
   <header class="bg-white shadow p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">SalaGuate</h1>
-    <a href="https://wa.me/50212345678" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Contáctanos</a>
+    <h1 class="text-2xl font-bold text-blue-700">Furniture City</h1>
+    <a href="#carrito" class="relative">
+      <span class="material-icons">🛒</span>
+      <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-2 text-sm">0</span>
+    </a>
   </header>
 
-  <section class="text-center py-10">
-    <h2 class="text-3xl font-semibold mb-4">Muebles de Sala en Guatemala</h2>
-    <p class="max-w-xl mx-auto">Encuentra tus muebles ideales para sala. Calidad, diseño y entrega a todo el país.</p>
+  <!-- Productos -->
+  <section class="p-6">
+    <h2 class="text-3xl font-semibold text-center mb-6">Nuestros Productos</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+      <!-- Producto 1 -->
+      <div class="bg-white p-4 rounded shadow">
+        <img src="https://via.placeholder.com/300x200" alt="Sofá Moderno" class="w-full h-48 object-cover rounded mb-4">
+        <h3 class="text-xl font-bold">Sofá Moderno</h3>
+        <p class="mb-2">Diseño elegante. 3 plazas.</p>
+        <p class="font-bold mb-2">Q2,500</p>
+        <button onclick="agregarAlCarrito('Sofá Moderno', 2500)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="bg-white p-4 rounded shadow">
+        <img src="https://via.placeholder.com/300x200" alt="Juego de Sala Clásico" class="w-full h-48 object-cover rounded mb-4">
+        <h3 class="text-xl font-bold">Juego de Sala Clásico</h3>
+        <p class="mb-2">5 piezas incluidas.</p>
+        <p class="font-bold mb-2">Q4,800</p>
+        <button onclick="agregarAlCarrito('Juego de Sala Clásico', 4800)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Agregar al carrito</button>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="bg-white p-4 rounded shadow">
+        <img src="https://via.placeholder.com/300x200" alt="Sillón Reclinable" class="w-full h-48 object-cover rounded mb-4">
+        <h3 class="text-xl font-bold">Sillón Reclinable</h3>
+        <p class="mb-2">Confort garantizado.</p>
+        <p class="font-bold mb-2">Q1,750</p>
+        <button onclick="agregarAlCarrito('Sillón Reclinable', 1750)" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Agregar al carrito</button>
+      </div>
+    </div>
   </section>
 
-  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 pb-10">
-    <!-- Producto 1 -->
-    <div class="bg-white rounded shadow p-4">
-      <img src="https://via.placeholder.com/300x200" alt="Sofá moderno" class="w-full h-48 object-cover rounded mb-4">
-      <h3 class="text-xl font-bold mb-2">Sofá Moderno 3 Plazas</h3>
-      <p class="mb-2">Cómodo y elegante. Disponible en varios colores.</p>
-      <p class="font-bold text-green-600">Q2,500</p>
-      <a href="https://wa.me/50212345678?text=Hola%2C%20me%20interesa%20el%20Sofá%20Moderno%203%20Plazas" class="block mt-3 bg-green-500 text-white py-2 rounded text-center">Solicitar por WhatsApp</a>
-    </div>
-
-    <!-- Producto 2 -->
-    <div class="bg-white rounded shadow p-4">
-      <img src="https://via.placeholder.com/300x200" alt="Juego de sala" class="w-full h-48 object-cover rounded mb-4">
-      <h3 class="text-xl font-bold mb-2">Juego de Sala Clásico</h3>
-      <p class="mb-2">Ideal para espacios familiares. 5 piezas incluidas.</p>
-      <p class="font-bold text-green-600">Q4,800</p>
-      <a href="https://wa.me/50212345678?text=Hola%2C%20quiero%20más%20info%20sobre%20el%20Juego%20de%20Sala%20Clásico" class="block mt-3 bg-green-500 text-white py-2 rounded text-center">Solicitar por WhatsApp</a>
-    </div>
-
-    <!-- Producto 3 -->
-    <div class="bg-white rounded shadow p-4">
-      <img src="https://via.placeholder.com/300x200" alt="Sillón reclinable" class="w-full h-48 object-cover rounded mb-4">
-      <h3 class="text-xl font-bold mb-2">Sillón Reclinable</h3>
-      <p class="mb-2">Máximo confort para tu sala o estudio.</p>
-      <p class="font-bold text-green-600">Q1,750</p>
-      <a href="https://wa.me/50212345678?text=Estoy%20interesado%20en%20el%20Sillón%20Reclinable" class="block mt-3 bg-green-500 text-white py-2 rounded text-center">Solicitar por WhatsApp</a>
-    </div>
+  <!-- Carrito -->
+  <section id="carrito" class="p-6 bg-white mt-10 rounded shadow mx-4 max-w-4xl mx-auto">
+    <h2 class="text-2xl font-semibold mb-4">🛒 Tu Carrito</h2>
+    <ul id="lista-carrito" class="mb-4"></ul>
+    <p class="font-bold">Total: Q<span id="total">0</span></p>
+    <a id="whatsapp-link" href="#" target="_blank" class="inline-block mt-4 bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600">Enviar pedido por WhatsApp</a>
   </section>
 
-  <footer class="bg-white text-center py-4 border-t">
-    <p>&copy; 2025 SalaGuate - Todos los derechos reservados.</p>
+  <!-- Footer -->
+  <footer class="bg-gray-200 text-center py-4 mt-10">
+    <p>&copy; 2025 Furniture City - Guatemala</p>
   </footer>
+
+  <!-- Script del carrito -->
+  <script>
+    const carrito = [];
+    const listaCarrito = document.getElementById("lista-carrito");
+    const totalSpan = document.getElementById("total");
+    const cartCount = document.getElementById("cart-count");
+    const whatsappLink = document.getElementById("whatsapp-link");
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      listaCarrito.innerHTML = "";
+      let total = 0;
+
+      carrito.forEach((item, index) => {
+        total += item.precio;
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - Q${item.precio}`;
+        listaCarrito.appendChild(li);
+      });
+
+      totalSpan.textContent = total;
+      cartCount.textContent = carrito.length;
+
+      // Crear mensaje para WhatsApp
+      const mensaje = carrito.map(item => `• ${item.nombre} - Q${item.precio}`).join("%0A");
+      const texto = `Hola, me interesa comprar los siguientes productos:%0A${mensaje}%0ATotal: Q${total}`;
+      whatsappLink.href = `https://wa.me/50232899518?text=${texto}`;
+    }
+  </script>
 </body>
 </html>
